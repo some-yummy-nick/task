@@ -96,16 +96,20 @@ body {
     flex-grow: 1;
     display: flex;
     left: -40px;
-    font-size: 20px;
+    font-size: 0;
 }
 .task__text.hasColor {
     display: block;
+}
+.task__text.hasColor .task__color{
+    margin-left: 0;
 }
 .task__text.active {
     opacity: 1;
 }
 .task__main, .task__color {
     display: inline;
+    font-size: 20px;
 }
 .task__main:focus, .task__color:focus {
     outline: none;
@@ -118,6 +122,7 @@ body {
     flex-grow: 1;
     color: brown;
     pointer-events: none;
+    margin-left: 5px;
 }
 .task__color.active {
     pointer-events: auto;
@@ -129,6 +134,7 @@ body {
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
+
 .task__color.input::before {
     content: "//";
     display: inline-block;

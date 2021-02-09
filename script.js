@@ -3,7 +3,6 @@ const taskWrapper = document.getElementById("js-task-wrapper");
 const text = document.getElementById("js-task-text");
 const color = document.getElementById("js-task-color");
 let keyCode = "";
-
 function placeCaretAtEnd(el) {
     el.focus();
     if (
@@ -59,14 +58,18 @@ color.addEventListener("input", (e) => {
     const value = color.textContent;
     color.textContent = value.replace("write note", "");
     placeCaretAtEnd(color);
-
     color.classList.add("input");
     taskWrapper.classList.add("hasColor");
 
     if (!value) {
         placeCaretAtEnd(text);
         color.classList.remove("input");
+        taskWrapper.classList.remove("hasColor");
     }
+});
+
+color.addEventListener("focus", (e) => {
+    task.classList.add("active");
 });
 
 document.addEventListener("keydown", (e) => {
