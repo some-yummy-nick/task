@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Task</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-$END$
+<div class="center">
+    <div class="task" id="js-task">
+        <div class="task__checkbox checkbox">
+            <label>
+                <input type="checkbox" class="checkbox__input visually-hidden">
+                <span class="checkbox__custom"></span>
+            </label>
+        </div>
+        <div class="task__text" id="js-task-wrapper">
+            <span class="task__main" id="js-task-text" contenteditable="true">Write a new task</span>
+            <span class="task__color" id="js-task-color" contenteditable="true"></span>
+        </div>
+        <div class="task__icon"></div>
+        <div class="select">
+            <select class="select__native">
+                <option value="no list">no list</option>
+            </select>
+            <div class="select__icon"></div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
